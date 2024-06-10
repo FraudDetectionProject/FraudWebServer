@@ -1,13 +1,12 @@
 import whisperx
-import gc 
 
 device = "cuda" 
 audio_file = "audio.mp3"
 batch_size = 16 # reduce if low on GPU mem
-compute_type = "float16" # change to "int8" if low on GPU mem (may reduce accuracy)
+compute_type = "float16" # change toh "int8" if low on GPU mem (may reduce accuracy)
 
 # 1. Transcribe with original whisper (batched)
-model = whisperx.load_model("large-v3", device, compute_type=compute_type, language='ko')
+model = whisperx.load_model("large-v2", device, compute_type=compute_type, language='ko')
 
 def transcript_audio(audio_file):
     # save model to local path (optional)

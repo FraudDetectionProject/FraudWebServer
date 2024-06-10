@@ -1,7 +1,6 @@
 from fastapi import APIRouter, UploadFile
 from typing import Union
 import os, shutil
-from collections import Counter
 import base64
 
 from models.yhdatamodel import *
